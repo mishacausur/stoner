@@ -6,9 +6,14 @@
 //
 
 #include <iostream>
+using namespace std;
+
+namespace aster {
+    int i = 1;
+    float f = 3.1413;
+}
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    cout << aster::i << " " << aster::f << endl;
     return 0;
 }
