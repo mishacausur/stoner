@@ -8,18 +8,33 @@
 #include <iostream>
 using namespace std;
 
-class Test {
+// HW
+
+class TPoints {
+    int x;
+    int y;
 public:
-    Test() {
-        cout << "constructor" << endl;
+    TPoints(int _x, int _y) {
+        x = _x;
+        y = _y;
     }
-    void Print() {
-        cout << "print\n";
+    
+    int GetM();
+    
+    ~TPoints() {
+        cout << GetM() << endl;
     }
+    
 };
 
+int TPoints::GetM() {
+    return  x - y;
+}
+
 int main() {
-    Test p;
-    p.Print();
+    TPoints x(6, 3);
+    {
+        TPoints y(21, 5);
+    }
     return 0;
 }
