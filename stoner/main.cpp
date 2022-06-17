@@ -8,18 +8,21 @@
 #include <iostream>
 using namespace std;
 
-struct TPoint {
-    int x;
-private:
+class TPoint {
     int y;
 public:
-    void SetY(int y1) {
-        y = y1;
-    }
-    int GetY() {
-        return y;
-    }
+    int x;
+    void SetY(int y1);
+    int GetY();
 };
+
+void TPoint::SetY(int y1) {
+    y = y1;
+}
+
+int TPoint::GetY() {
+    return y;
+}
 
 int main() {
     TPoint p;
