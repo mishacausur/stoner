@@ -11,9 +11,8 @@ using namespace std;
 
 int main() {
     int *a = NULL;
-    a = (int*)malloc( sizeof(a));
-    *a = 5;
+    a = new int(7);
     cout << *a << endl;
-    free(a);
+    delete a;
     return 0;
 }
